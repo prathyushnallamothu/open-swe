@@ -148,6 +148,7 @@ export const MODEL_OPTIONS = [
 
 export const MODEL_OPTIONS_NO_THINKING = MODEL_OPTIONS.filter(
   ({ value }) =>
-    !value.includes("extended-thinking") || !value.startsWith("openai:o"),
+    !value.includes("extended-thinking") && !value.startsWith("openai:o"),
 );
+
 
