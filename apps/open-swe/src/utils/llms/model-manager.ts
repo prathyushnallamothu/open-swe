@@ -83,6 +83,8 @@ const providerToApiKey = (
       return apiKeys.anthropicApiKey;
     case "google-genai":
       return apiKeys.googleApiKey;
+    case "ollama":
+      return apiKeys.ollamaBaseUrl || "http://localhost:11434";
     default:
       throw new Error(`Unknown provider: ${providerName}`);
   }
@@ -486,4 +488,5 @@ export function resetModelManager(): void {
     globalModelManager = null;
   }
 }
+
 
