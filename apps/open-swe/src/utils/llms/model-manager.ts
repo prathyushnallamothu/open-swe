@@ -370,6 +370,13 @@ export class ModelManager {
         [LLMTask.ROUTER]: "gpt-4o-mini",
         [LLMTask.SUMMARIZER]: "gpt-4.1-mini",
       },
+      ollama: {
+        [LLMTask.PLANNER]: "llama3.1:70b",
+        [LLMTask.PROGRAMMER]: "qwen2.5-coder:32b",
+        [LLMTask.REVIEWER]: "llama3.1:70b",
+        [LLMTask.ROUTER]: "llama3.2:11b",
+        [LLMTask.SUMMARIZER]: "qwen2.5:32b",
+      },
     };
 
     const modelName = defaultModels[provider][task];
@@ -488,5 +495,6 @@ export function resetModelManager(): void {
     globalModelManager = null;
   }
 }
+
 
 
