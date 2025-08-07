@@ -360,4 +360,3 @@ export async function generateAction(
     tokenData: trackCachePerformance(response, modelName),
   };
 }
-
